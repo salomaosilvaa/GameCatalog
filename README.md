@@ -3,47 +3,28 @@ Trata-se de um projeto de CLI (Command-Line Interface) cujo intuito é gerenciar
 ## Objetivo do Sistema
 O LastPlayed permite que seus usuários cadastrem jogos com informações detalhadas, controlem seu progresso in-game, filtrem e organizem jogos, criem coleções personalizadas e gerem relatórios contendo informações relevantes. 
 ## Estrutura do Projeto:
+```text
 LastPlayed/
-
 │
-
 ├── README.md
-
 ├── requirements.txt
-
 ├── main.py
-
 │
-
 ├── source/
-
 │   ├── dominio/
-
 │   │   ├── jogo.py
-
 │   │   ├── jogo_pc.py
-
 │   │   ├── jogo_console.py
-
 │   │   ├── jogo_mobile.py
-
 │   │   ├── colecao.py
-
-│   │   └── usuario.py   (opcional)
-
+│   │   └── usuario.py   
 │   │
-
 │   ├── dados/
-
 │        ├── repositorio_json.py
-
 │        ├── relatorios.py
-
 │        └── settings.py
-
 │ 
 └── tests/
-
     └── test.py
 
 ## UML
