@@ -26,6 +26,6 @@ LastPlayed/
 │ 
 └── tests/
     └── test.py
-
+```
 ## UML
 <img width="1811" height="3138" alt="Untitled diagram-2025-11-18-052909" src="https://github.com/user-attachments/assets/7738928b-4260-4c70-b6bd-1625955d326f" />
