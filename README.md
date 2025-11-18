@@ -3,7 +3,7 @@ Trata-se de um projeto de CLI (Command-Line Interface) cujo intuito é gerenciar
 ## Objetivo do Sistema
 O LastPlayed permite que seus usuários cadastrem jogos com informações detalhadas, controlem seu progresso in-game, filtrem e organizem jogos, criem coleções personalizadas e gerem relatórios contendo informações relevantes. 
 ## Estrutura do Projeto:
-projeto_LastPlayed/
+LastPlayed/
 
 │
 
@@ -15,7 +15,7 @@ projeto_LastPlayed/
 
 │
 
-├── src/
+├── source/
 
 │   ├── dominio/
 
@@ -44,7 +44,7 @@ projeto_LastPlayed/
 │ 
 └── tests/
 
-    └── test_exemplo.py
+    └── test.py
 
 ## UML
 <img width="1811" height="3138" alt="Untitled diagram-2025-11-18-052909" src="https://github.com/user-attachments/assets/7738928b-4260-4c70-b6bd-1625955d326f" />
