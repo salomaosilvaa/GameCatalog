@@ -3,4 +3,5 @@ class JogoPC(Jogo):
     """
     Representa um jogo na plataforma PC.
     """
-    pass
+    def __init__(self, titulo, genero, ano_lancamento):
+        super().__init__(titulo, genero, "PC", ano_lancamento)
