@@ -1,0 +1,37 @@
+# ----------------------------------------
+#               LastPlayed
+# ----------------------------------------
+
+# Ambiente virtual
+.venv/
+venv/
+
+# Caches e artefatos do Python
+__pycache__/
+.pytest_cache/
+*.pyc
+*.pyo
+*.pyd
+
+# Configurações de IDE
+.vscode/
+.idea/
+
+# Arquivos temporários de SO
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Arquivos de ambiente / segredo
+.env
+.env.*
+
+# Build e dist (caso gere pacotes)
+build/
+dist/
+*.egg-info/
+
+# Arquivos específicos do Windows PowerShell
+*.ps1
