@@ -9,9 +9,13 @@ LastPlayed/
 ├── README.md
 ├── requirements.txt
 ├── main.py
+├── .gitignore
+├── pytest.ini
 │
 ├── source/
+│   ├── __init.py__
 │   ├── dominio/
+│   │   ├── __init.py__
 │   │   ├── jogo.py
 │   │   ├── jogo_pc.py
 │   │   ├── jogo_console.py
@@ -19,13 +23,18 @@ LastPlayed/
 │   │   ├── colecao.py
 │   │   └── usuario.py   
 │   │
-│   ├── dados/
-│        ├── repositorio_json.py
-│        ├── relatorios.py
-│        └── settings.py
-│ 
+│   └── dados/
+│       ├── __init.py__
+│       ├── jogos.json
+│       ├── repositorio_json.py
+│       ├── relatorios.py
+│       └── settings.py
+│   
 └── tests/
-    └── test.py
+    ├── test_colecao.py
+    ├── test_criar_jogo.py
+    ├── test_progresso.py
+    └── __pycache__
 ```
 ## UML
 <img width="1811" height="3138" alt="Untitled diagram-2025-11-18-052909" src="https://github.com/user-attachments/assets/7738928b-4260-4c70-b6bd-1625955d326f" />
