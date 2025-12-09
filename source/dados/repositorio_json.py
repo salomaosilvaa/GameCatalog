@@ -1,4 +1,5 @@
 import json
+from source.dominio.jogo import Jogo
 from source.dominio.jogo_pc import JogoPC
 from source.dominio.jogo_console import JogoConsole
 from source.dominio.jogo_mobile import JogoMobile
@@ -19,7 +20,9 @@ def carregar_jogos(caminho="source/dados/jogos.json"):
     for d in dados:
         tipo = d["tipo"]
 
-        if tipo == "PC":
+        if tipo == "Jogo": 
+            cls = Jogo
+        elif tipo == "PC":
             cls = JogoPC
         elif tipo == "Console":
             cls = JogoConsole

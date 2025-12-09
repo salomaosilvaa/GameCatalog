@@ -26,6 +26,7 @@ LastPlayed/
 │   └── dados/
 │       ├── __init.py__
 │       ├── jogos.json
+│       ├── usuario.json
 │       ├── repositorio_json.py
 │       ├── relatorios.py
 │       └── settings.py
