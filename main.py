@@ -1,3 +1,4 @@
+from source.dominio.jogo import Jogo
 from source.dominio.usuario import Usuario
 from source.dominio.colecao import Colecao
 from source.dados.relatorios import relatorio_texto
@@ -41,7 +42,8 @@ def adicionar_jogo(colecao):
     plataforma = input("Plataforma (PC/Console/Mobile): ")
     ano = input("Ano de lançamento: ")
 
-    colecao.adicionar(titulo, genero, plataforma, ano)
+    jogo = Jogo(titulo, genero, plataforma, ano)
+    colecao.adicionar(jogo)
     print(f"Jogo '{titulo}' adicionado com sucesso!")
 
 
