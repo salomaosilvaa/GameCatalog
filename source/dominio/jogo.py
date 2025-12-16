@@ -48,8 +48,8 @@ class Jogo:
     def status(self, novo_status):
         if not isinstance(novo_status, Status):
             raise ValueError("Status inválido.")
-        if self._status == Status.FINALIZADO and novo_status != Status.FINALIZADO:
-            raise ValueError("Não é possível alterar o status após a finalização.")
+        if self._status == Status.FINALIZADO and novo_status == Status.NAO_INICIADO:
+            raise ValueError("Use o método REINICIAR para alterar o status de um jogo finalizado.")
         self._status = novo_status
 
     @property
@@ -79,8 +79,11 @@ class Jogo:
         self.status = Status.FINALIZADO
 
     def reiniciar(self):
+        if self._status != Status.FINALIZADO:
+            raise ValueError("Só é possível reiniciar jogos finalizados.")
         self._horas = 0
-        self.status = Status.JOGANDO
+        self._avaliacao = None
+        self._status = Status.JOGANDO
 
     # SERIALIZAÇÃO
     def to_dict(self):

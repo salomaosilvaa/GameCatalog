@@ -3,16 +3,18 @@ from source.dominio.jogo import Jogo
 from source.dominio.jogo_pc import JogoPC
 from source.dominio.jogo_console import JogoConsole
 from source.dominio.jogo_mobile import JogoMobile
+from .settings import CAMINHO_JOGOS
+
 '''
 RESPONSÁVEL POR ARMAZENAR E CONTER DADOS ADQUIRIDOS NO USO DO SISTEMA.
 '''
 
-def salvar_jogos(jogos, caminho="source/dados/jogos.json"):
+def salvar_jogos(jogos, caminho=CAMINHO_JOGOS):
     lista = [j.to_dict() for j in jogos]
     with open(caminho, "w", encoding="utf-8") as f:
         json.dump(lista, f, indent=4, ensure_ascii=False)
 
-def carregar_jogos(caminho="source/dados/jogos.json"):
+def carregar_jogos(caminho=CAMINHO_JOGOS):
     with open(caminho, "r", encoding="utf-8") as f:
         dados = json.load(f)
 

@@ -1,3 +1,4 @@
+from source.dados.settings import CAMINHO_JOGOS
 from .jogo import Jogo, Status
 from source.dados.repositorio_json import salvar_jogos, carregar_jogos
 class Colecao:
@@ -28,7 +29,7 @@ class Colecao:
     def listar(self):
         return list(self._jogos)
     
-    def salvar(self, caminho ="source/dados/jogos.json"):
+    def salvar(self, caminho = CAMINHO_JOGOS):
         salvar_jogos(self._jogos, caminho)
     
     def filtrar(self, genero = None, status = None, plataforma = None):
@@ -75,7 +76,7 @@ class Colecao:
 
 
     @classmethod
-    def carregar(cls, caminho = "source/dados/jogos.json"):
+    def carregar(cls, caminho = CAMINHO_JOGOS):
         jogos = carregar_jogos(caminho)
         colecao = cls("Minha coleção")
         for j in jogos:

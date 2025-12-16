@@ -1,5 +1,6 @@
 import json
 import os
+from source.dados.settings import CAMINHO_USUARIO
 
 class Usuario:
     """
@@ -14,7 +15,7 @@ class Usuario:
 
     # PERSISTÊNCIA:
 
-    def salvar(self, caminho="source/dados/usuario.json"):
+    def salvar(self, caminho=CAMINHO_USUARIO):
         dados = {
             "nome": self.nome,
             "senha": self.senha,
@@ -24,7 +25,7 @@ class Usuario:
             json.dump(dados, f, indent=4)
 
     @classmethod
-    def carregar(cls, caminho="source/dados/usuario.json"):
+    def carregar(cls, caminho=CAMINHO_USUARIO):
         if not os.path.exists(caminho):
             raise FileNotFoundError("Arquivo de usuário não encontrado.")
 

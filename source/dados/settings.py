@@ -1,5 +1,2 @@
-class Configuracoes:
-    """
-    Representa configurações do sistema, futuramente dispostas em um arquivo JSON.
-    """
-    pass
+CAMINHO_JOGOS = "source/dados/jogos.json"
+CAMINHO_USUARIO = "source/dados/usuario.json"

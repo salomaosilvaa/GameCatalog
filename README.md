@@ -1,7 +1,22 @@
 # LastPlayed - Sistema de Gerenciamento de Catálogos Pessoais de Jogos Digitais
-Trata-se de um projeto de CLI (Command-Line Interface) cujo intuito é gerenciar um catálogo pessoal de jogos digitais. O foco é utilizar recursos e conceitos da Programação Orientada a Objetos (POO), como herança e encapsulamento, a fim de  cumprir os requisitos do sistema.
+O LastPlayed é um sistema de linha de comando (CLI) desenvolvido em Python para gerenciamento de catálogos pessoais de jogos digitais.
+O projeto tem como foco a aplicação prática de conceitos de Programação Orientada a Objetos (POO), como encapsulamento, herança, composição, validações de domínio e persistência de dados.
 ## Objetivo do Sistema
-O LastPlayed permite que seus usuários cadastrem jogos com informações detalhadas, controlem seu progresso in-game, filtrem e organizem jogos, criem coleções personalizadas e gerem relatórios contendo informações relevantes. 
+O LastPlayed permite que usuários: cadastrem jogos com informações detalhadas, acompanhem progresso (horas jogadas, status e avaliações), organizem jogos por filtros e ordenações, gerem relatórios consolidados (top 5, médias e percentuais), persistam dados localmente em arquivos JSON e utilizem o sistema de forma interativa via terminal.
+## Conceitos Aplicados
+- Programação Orientada a Objetos (POO)
+- Encapsulamento e validação de regras de negócio
+- Herança (jogos por plataforma)
+- Serialização e persistência em JSON
+- Separação de responsabilidades (domínio, dados e interface)
+- Testes automatizados com pytest
+- Estrutura modular e extensível
+## Requisitos do Sistema
+- Python 3.10 ou superior
+- Windows, Linux ou MacOS
+- Terminal
+### Dependências
+- pytest (as outras bibliotecas são nativas do Python)
 ## Estrutura do Projeto:
 ```text
 LastPlayed/
@@ -21,20 +36,25 @@ LastPlayed/
 │   │   ├── jogo_console.py
 │   │   ├── jogo_mobile.py
 │   │   ├── colecao.py
-│   │   └── usuario.py   
+│   │   └── usuario.py
 │   │
-│   └── dados/
-│       ├── __init.py__
-│       ├── jogos.json
-│       ├── usuario.json
-│       ├── repositorio_json.py
-│       ├── relatorios.py
-│       └── settings.py
-│   
+│   ├── dados/
+│   │   ├── __init.py__
+│   │   ├── jogos.json
+│   │   ├── usuario.json
+│   │   ├── repositorio_json.py
+│   │   ├── relatorios.py
+│   │   └── settings.py
+│   │
+│   └── utils/
+│       └── cores.py
 └── tests/
     ├── test_colecao.py
-    ├── test_criar_jogo.py
-    ├── test_progresso.py
+    ├── test_filtros.py
+    ├── test_jogo.py
+    ├── test_ordenacao.py
+    ├── test_persist.py
+    ├── test.relatorios.py
     └── __pycache__
 ```
 ## UML
